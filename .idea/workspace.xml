@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_excursion_details.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_vacation_details.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_vacations.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/excursion_list.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/vacation_list.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_excursiondetails.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_excursions.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_vacationdetails.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9ef7e24-8fb6-48b3-bc67-41ca51ffaf0f" name="Changes" comment="correctly added README.md">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidPluginAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs$BundleAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs$EspressoLibraryAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs$ExtLibraryAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs$PluginAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs$RoomLibraryAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs$VersionAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidPluginAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$BundleAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$EspressoLibraryAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$ExtLibraryAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$PluginAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$RoomLibraryAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$VersionAccessors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/metadata.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/sources/org/gradle/accessors/dm/LibrariesForLibs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/c32e18c306cb9e9ef0f09277ccd7d1f24ee7b86c/sources/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.9/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug/app-debug.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release/app-release.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release/baselineProfiles/0/app-release.dm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release/baselineProfiles/1/app-release.dm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/androidTest/java/com/example/d308vacationplanner/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/UI/ExcursionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/UI/ExcursionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/UI/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/UI/MyReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/UI/VacationAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/UI/VacationDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/UI/Vacations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/ViewModels/ExcursionViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/ViewModels/VacationViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/dao/ExcursionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/dao/VacationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/database/Converters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/database/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/database/VacationDatabaseBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/entities/Excursion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/d308vacationplanner/entities/Vacation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/gradient_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/gradient_background_even.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/gradient_background_odd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_excursion_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_vacation_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_vacations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/excursion_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/vacation_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/menu/menu_excursiondetails.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/menu/menu_excursions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/menu/menu_vacationdetails.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/d308vacationplanner/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/debug/app-debug.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/debug/output-metadata.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/markillion/.android/avd/Pixel_9_Pro_API_35.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="D308 Vacation Planner" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="D308 Vacation Planner" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="D308 Vacation Planner" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="D308 Vacation Planner" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="valueResourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/Desktop/308 Key/308 keystore" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/app" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;mloya23&quot;,
+      &quot;fullname&quot;: &quot;Mark Loya&quot;
+    }
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.com/wgu-gitlab-environment/student-repos/mloya23/d308-mobile-application-development-android.git&quot;,
+    &quot;second&quot;: &quot;cecbe19c-bdaa-461f-99b6-48b2d6772a8b&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2oGRHI4WCMxEllyM2RitnQfklZM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "ApkExportedModule": "D308_Vacation_Planner.app",
+    "ExportApk.ApkPathForD308_Vacation_Planner.app": "/Users/markillion/AndroidStudioProjects/D308VacationPlanner/app",
+    "PROJECT_TRUSTED_KEY": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "working__branch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/markillion/AndroidStudioProjects/D308VacationPlanner",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  },
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "debug",
+      "release"
+    ]
+  }
+}]]></component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+    <key name="android.template.1963879305">
+      <recent name="com.example.d308vacationplanner.UI" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.d308vacationplanner.UI" />
+      <recent name="com.example.d308vacationplanner" />
+    </key>
+    <key name="android.template.144078182">
+      <recent name="com.example.d308vacationplanner.UI" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="D308VacationPlanner.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9ef7e24-8fb6-48b3-bc67-41ca51ffaf0f" name="Changes" comment="" />
+      <created>1730493836979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730493836979</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Able to delete vacations with no excursions">
+      <option name="closed" value="true" />
+      <created>1731701828069</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731701828069</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Spinner working done with video 4">
+      <option name="closed" value="true" />
+      <created>1731705457841</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731705457841</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Changed price to hotel and added date confirmation and updated VacationDetails layout">
+      <option name="closed" value="true" />
+      <created>1731965677285</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731965677285</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added a share vacation option">
+      <option name="closed" value="true" />
+      <created>1731970095089</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1731970095089</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Date verification working again">
+      <option name="closed" value="true" />
+      <created>1731970601534</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1731970601534</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Excursion details now showing hotel and not price">
+      <option name="closed" value="true" />
+      <created>1732043530923</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732043530923</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Alert set up for vacation list and added alarm set up verifications">
+      <option name="closed" value="true" />
+      <created>1732052437557</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732052437557</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Calendar buttons working again">
+      <option name="closed" value="true" />
+      <created>1732053371719</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732053371719</updated>
+    </task>
+    <task id="LOCAL-00025" summary="vacation details seems to be working need to fix how excursions are saved">
+      <option name="closed" value="true" />
+      <created>1732061227208</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732061227208</updated>
+    </task>
+    <task id="LOCAL-00026" summary="vacationID generation is working allowing users to save more than 1 vacation">
+      <option name="closed" value="true" />
+      <created>1732069274501</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732069274501</updated>
+    </task>
+    <task id="LOCAL-00027" summary="spinner in excursion details now preselects the current vacation">
+      <option name="closed" value="true" />
+      <created>1732071782085</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732071782085</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixed entering, updating and deleting vacations and made UI improvements.">
+      <option name="closed" value="true" />
+      <created>1732133724317</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732133724317</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Users now can add, update, and delete as many excursions as needed.">
+      <option name="closed" value="true" />
+      <created>1732137659250</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732137659250</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added validation to prevent updating vacations without changes.">
+      <option name="closed" value="true" />
+      <created>1732138209180</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732138209180</updated>
+    </task>
+    <task id="LOCAL-00031" summary="vacations save date changes again">
+      <option name="closed" value="true" />
+      <created>1732140914683</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732140914683</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Implemented date validation for excursions and ensured proper CRUD operations. Added functionality to validate excursion dates against vacation dates, and improved user feedback with toast messages for save, update, and delete actions.">
+      <option name="closed" value="true" />
+      <created>1732143281032</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1732143281032</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Added &quot;Notify&quot; functionality to ExcursionDetails">
+      <option name="closed" value="true" />
+      <created>1732144163733</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1732144163733</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added user feedback for save, update, delete, and notify actions in ExcursionDetails.">
+      <option name="closed" value="true" />
+      <created>1732146077855</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1732146077855</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added validation to ensure excursion name and date are required before saving. Date of excursion shows on vacationdetails">
+      <option name="closed" value="true" />
+      <created>1732157944316</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1732157944316</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added validation to ensure excursion name and date are required before saving. Date of excursion shows on vacationdetails">
+      <option name="closed" value="true" />
+      <created>1732236378563</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1732236378563</updated>
+    </task>
+    <task id="LOCAL-00037" summary="updates to excursion details">
+      <option name="closed" value="true" />
+      <created>1732244390142</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1732244390142</updated>
+    </task>
+    <task id="LOCAL-00038" summary="updates to excursion details 2">
+      <option name="closed" value="true" />
+      <created>1732248355299</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1732248355299</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Converted to live data. so much smoother. logic needs to be double checked.">
+      <option name="closed" value="true" />
+      <created>1732304552902</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1732304552902</updated>
+    </task>
+    <task id="LOCAL-00040" summary="back button in excursiondetails is working properly">
+      <option name="closed" value="true" />
+      <created>1732313624299</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1732313624299</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Implement validation so that a vacation cannot be deleted if excursions are associated with it">
+      <option name="closed" value="true" />
+      <created>1732314653740</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1732314653740</updated>
+    </task>
+    <task id="LOCAL-00042" summary="improvements to vacationdetails">
+      <option name="closed" value="true" />
+      <created>1732315455776</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1732315455776</updated>
+    </task>
+    <task id="LOCAL-00043" summary="improvements to vacationdetails">
+      <option name="closed" value="true" />
+      <created>1732315665370</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1732315665370</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Main page ui upgraded">
+      <option name="closed" value="true" />
+      <created>1732325363400</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1732325363400</updated>
+    </task>
+    <task id="LOCAL-00045" summary="vacations ui upgraded">
+      <option name="closed" value="true" />
+      <created>1732341429632</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1732341429632</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added animation to add vacation button">
+      <option name="closed" value="true" />
+      <created>1732342642642</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1732342642642</updated>
+    </task>
+    <task id="LOCAL-00047" summary="added animation text to show users how to add a vacation">
+      <option name="closed" value="true" />
+      <created>1732347023718</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1732347023718</updated>
+    </task>
+    <task id="LOCAL-00048" summary="vacationdetails ui upgrade">
+      <option name="closed" value="true" />
+      <created>1732352175413</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1732352175413</updated>
+    </task>
+    <task id="LOCAL-00049" summary="vacationdetails and vacation ui elements matching">
+      <option name="closed" value="true" />
+      <created>1732412589457</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1732412589457</updated>
+    </task>
+    <task id="LOCAL-00050" summary="vacationdetails and vacation ui elements matching">
+      <option name="closed" value="true" />
+      <created>1732415702609</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1732415702609</updated>
+    </task>
+    <task id="LOCAL-00051" summary="button ui elements matching">
+      <option name="closed" value="true" />
+      <created>1732418256930</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1732418256930</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Excursiondetails ui updated">
+      <option name="closed" value="true" />
+      <created>1732556816286</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1732556816287</updated>
+    </task>
+    <task id="LOCAL-00053" summary="final ui changes">
+      <option name="closed" value="true" />
+      <created>1732566802102</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1732566802102</updated>
+    </task>
+    <task id="LOCAL-00054" summary="final working ui changes">
+      <option name="closed" value="true" />
+      <created>1732568011151</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1732568011151</updated>
+    </task>
+    <task id="LOCAL-00055" summary="final working ui changes">
+      <option name="closed" value="true" />
+      <created>1732568289229</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1732568289229</updated>
+    </task>
+    <task id="LOCAL-00056" summary="all alarms working and final ui changes">
+      <option name="closed" value="true" />
+      <created>1732580061522</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1732580061522</updated>
+    </task>
+    <task id="LOCAL-00057" summary="small fixes">
+      <option name="closed" value="true" />
+      <created>1732582440615</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1732582440617</updated>
+    </task>
+    <task id="LOCAL-00058" summary="fix: resolved IDE issues and updated strings">
+      <option name="closed" value="true" />
+      <created>1732658390997</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1732658390997</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix: resolved IDE issues and updated strings">
+      <option name="closed" value="true" />
+      <created>1732659084776</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1732659084776</updated>
+    </task>
+    <task id="LOCAL-00060" summary="start and end date alerts can be made separately">
+      <option name="closed" value="true" />
+      <created>1732668166762</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1732668166762</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Made changes to layout and code after reviewing Common Fail Points to improve functionality and user experience.">
+      <option name="closed" value="true" />
+      <created>1732676240839</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1732676240839</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fix several ide warnings and made change after reading project's common fail points">
+      <option name="closed" value="true" />
+      <created>1732733786428</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1732733786428</updated>
+    </task>
+    <task id="LOCAL-00063" summary="final tweaks to improve layout and user usability">
+      <option name="closed" value="true" />
+      <created>1732741305611</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1732741305611</updated>
+    </task>
+    <task id="LOCAL-00064" summary="added README.md">
+      <option name="closed" value="true" />
+      <created>1732745791241</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1732745791242</updated>
+    </task>
+    <task id="LOCAL-00065" summary="correctly added README.md">
+      <option name="closed" value="true" />
+      <created>1733429822739</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1733429822740</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updates to excursion details" />
+    <MESSAGE value="updates to excursion details 2" />
+    <MESSAGE value="Converted to live data. so much smoother. logic needs to be double checked." />
+    <MESSAGE value="back button in excursiondetails is working properly" />
+    <MESSAGE value="Implement validation so that a vacation cannot be deleted if excursions are associated with it" />
+    <MESSAGE value="improvements to vacationdetails" />
+    <MESSAGE value="Main page ui upgraded" />
+    <MESSAGE value="vacations ui upgraded" />
+    <MESSAGE value="added animation to add vacation button" />
+    <MESSAGE value="added animation text to show users how to add a vacation" />
+    <MESSAGE value="vacationdetails ui upgrade" />
+    <MESSAGE value="vacationdetails and vacation ui elements matching" />
+    <MESSAGE value="button ui elements matching" />
+    <MESSAGE value="Excursiondetails ui updated" />
+    <MESSAGE value="final ui changes" />
+    <MESSAGE value="final working ui changes" />
+    <MESSAGE value="all alarms working and final ui changes" />
+    <MESSAGE value="small fixes" />
+    <MESSAGE value="fix: resolved IDE issues and updated strings" />
+    <MESSAGE value="start and end date alerts can be made separately" />
+    <MESSAGE value="Made changes to layout and code after reviewing Common Fail Points to improve functionality and user experience." />
+    <MESSAGE value="fix several ide warnings and made change after reading project's common fail points" />
+    <MESSAGE value="final tweaks to improve layout and user usability" />
+    <MESSAGE value="added README.md" />
+    <MESSAGE value="correctly added README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="correctly added README.md" />
+  </component>
+</project>
