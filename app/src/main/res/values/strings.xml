@@ -71,4 +71,6 @@
     <string name="share_vacation_details">Share Vacation Details</string>
     <string name="set_start_alert">Set Start Alert</string>
     <string name="set_end_alert">Set End Alert</string>
+    <string name="search_hint">Search by vacation name</string>
+    <string name="add_vacation_description">Add a new vacation</string>
 </resources>

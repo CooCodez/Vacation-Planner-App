@@ -6,6 +6,8 @@ import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,10 +17,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.d308vacationplanner.R;
 import com.example.d308vacationplanner.entities.Vacation;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.VacationViewHolder> {
+public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.VacationViewHolder> implements Filterable {
     private List<Vacation> mVacations;
+    private List<Vacation> mVacationsFull;
     private final Context context;
     private final LayoutInflater mInflater;
 
@@ -32,18 +36,19 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
 
         public VacationViewHolder(@NonNull View itemView) {
             super(itemView);
-            vacationLocationView = itemView.findViewById(R.id.vacationLocation);  // Ensure you use the correct ID from XML
-
+            vacationLocationView = itemView.findViewById(R.id.vacationLocation);
             itemView.setOnClickListener(v -> {
                 int position = getAdapterPosition();
-                final Vacation current = mVacations.get(position);
-                Intent intent = new Intent(context, VacationDetails.class);
-                intent.putExtra("id", current.getVacationID());
-                intent.putExtra("name", current.getVacationName());
-                intent.putExtra("hotel", current.getHotel());
-                intent.putExtra("startDate", current.getStartDate().getTime());  // Convert Date to long
-                intent.putExtra("endDate", current.getEndDate().getTime());  // Convert Date to long
-                context.startActivity(intent);
+                if (position != RecyclerView.NO_POSITION) {
+                    Vacation current = mVacations.get(position);
+                    Intent intent = new Intent(context, VacationDetails.class);
+                    intent.putExtra("id", current.getVacationID());
+                    intent.putExtra("name", current.getVacationName());
+                    intent.putExtra("hotel", current.getHotel());
+                    intent.putExtra("startDate", current.getStartDate().getTime());
+                    intent.putExtra("endDate", current.getEndDate().getTime());
+                    context.startActivity(intent);
+                }
             });
         }
     }
@@ -51,36 +56,23 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
     @NonNull
     @Override
     public VacationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.vacation_list, parent, false);  // Use the updated XML layout
+        View itemView = mInflater.inflate(R.layout.vacation_list, parent, false);
         return new VacationViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VacationAdapter.VacationViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull VacationViewHolder holder, int position) {
         if (mVacations != null) {
             Vacation current = mVacations.get(position);
-            String name = current.getVacationName();
-            holder.vacationLocationView.setText(name);
-
-            // Set the text size, font weight, and style (bold)
-            holder.vacationLocationView.setTextSize(30);  // Increase font size
-            holder.vacationLocationView.setTypeface(null, Typeface.BOLD);  // Make text bold
-
-            // Set the text color to white for all rows
+            holder.vacationLocationView.setText(current.getVacationName());
+            holder.vacationLocationView.setTextSize(30);
+            holder.vacationLocationView.setTypeface(null, Typeface.BOLD);
             holder.vacationLocationView.setTextColor(ContextCompat.getColor(context, R.color.white));
-
-            // Apply alternating gradient background with borders to each row
-            if (position % 2 == 0) {
-                holder.vacationLocationView.setBackgroundResource(R.drawable.gradient_background_even); // Even rows: Gradient background with border
-            } else {
-                holder.vacationLocationView.setBackgroundResource(R.drawable.gradient_background_odd); // Odd rows: Alternating gradient background with border
-            }
+            holder.vacationLocationView.setBackgroundResource(position % 2 == 0 ? R.drawable.gradient_background_even : R.drawable.gradient_background_odd);
         } else {
-            holder.vacationLocationView.setText(context.getString(R.string.no_vacation_name));
+            holder.vacationLocationView.setText("No Vacation Name");
         }
     }
-
-
 
     @Override
     public int getItemCount() {
@@ -89,6 +81,39 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
 
     public void setVacations(List<Vacation> vacations) {
         mVacations = vacations;
+        mVacationsFull = new ArrayList<>(vacations);
         notifyDataSetChanged();
     }
+
+    @Override
+    public Filter getFilter() {
+        return vacationFilter;
+    }
+
+    private final Filter vacationFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<Vacation> filteredList = new ArrayList<>();
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(mVacationsFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+                for (Vacation vacation : mVacationsFull) {
+                    if (vacation.getVacationName().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(vacation);
+                    }
+                }
+            }
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            mVacations.clear();
+            mVacations.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 }
