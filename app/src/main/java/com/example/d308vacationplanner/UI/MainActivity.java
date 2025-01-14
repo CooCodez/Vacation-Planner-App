@@ -46,5 +46,13 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("test", "Information sent");
             startActivity(intent);
         });
+
+        // Button to navigate to the Report screen
+        Button reportButton = findViewById(R.id.buttonViewReport);
+        reportButton.setOnClickListener(v -> {
+            // Navigate to ReportActivity when clicked
+            Intent intent = new Intent(MainActivity.this, ReportActivity.class);
+            startActivity(intent);
+        });
     }
 }
