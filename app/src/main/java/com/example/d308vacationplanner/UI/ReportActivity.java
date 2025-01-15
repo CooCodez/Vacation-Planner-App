@@ -7,13 +7,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.d308vacationplanner.R;
 import com.example.d308vacationplanner.ViewModels.VacationViewModel;
+import com.example.d308vacationplanner.ViewModels.ExcursionViewModel;
 import com.example.d308vacationplanner.entities.Vacation;
+import com.example.d308vacationplanner.entities.Excursion;
 
 public class ReportActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private ReportAdapter mAdapter;
     private VacationViewModel mVacationViewModel;
+    private ExcursionViewModel mExcursionViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +29,16 @@ public class ReportActivity extends AppCompatActivity {
         mAdapter = new ReportAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
 
-        // Initialize ViewModel
+        // Initialize ViewModels
         mVacationViewModel = new ViewModelProvider(this).get(VacationViewModel.class);
+        mExcursionViewModel = new ViewModelProvider(this).get(ExcursionViewModel.class);
 
         // Observe the data and pass it to the adapter
         mVacationViewModel.getAllVacations().observe(this, vacations -> {
-            // Populate the RecyclerView with vacation data
-            mAdapter.setVacations(vacations);
+            mExcursionViewModel.getAllExcursions().observe(this, excursions -> {
+                // Populate the RecyclerView with vacation and excursion data
+                mAdapter.setVacations(vacations, excursions);
+            });
         });
 
         // Set the title and enable back button

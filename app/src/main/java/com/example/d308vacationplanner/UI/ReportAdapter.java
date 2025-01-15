@@ -5,19 +5,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.d308vacationplanner.R;
+import com.example.d308vacationplanner.entities.Excursion;
 import com.example.d308vacationplanner.entities.Vacation;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
 
     private List<Vacation> mVacations;
     private final LayoutInflater mInflater;
+    private List<Excursion> mExcursions;  // Store excursions to display
 
     public ReportAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
+        mVacations = new ArrayList<>();
+        mExcursions = new ArrayList<>();
     }
 
     @NonNull
@@ -35,6 +43,18 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
             holder.hotelView.setText(current.getHotel());
             holder.startDateView.setText(current.getStartDate().toString());
             holder.endDateView.setText(current.getEndDate().toString());
+
+            // Display the "Excursions" label
+            holder.excursionTitleView.setText("Excursions");
+
+            // Display excursions for this vacation
+            StringBuilder excursions = new StringBuilder();
+            for (Excursion excursion : mExcursions) {
+                if (excursion.getVacationID() == current.getVacationID()) {
+                    excursions.append(excursion.getExcursionName()).append("\n");
+                }
+            }
+            holder.excursionView.setText(excursions.toString());
         }
     }
 
@@ -43,8 +63,10 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         return (mVacations != null) ? mVacations.size() : 0;
     }
 
-    public void setVacations(List<Vacation> vacations) {
+    // Method to set the vacations list and excursions
+    public void setVacations(List<Vacation> vacations, List<Excursion> excursions) {
         mVacations = vacations;
+        mExcursions = excursions;
         notifyDataSetChanged();
     }
 
@@ -53,6 +75,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         private final TextView hotelView;
         private final TextView startDateView;
         private final TextView endDateView;
+        private final TextView excursionView;
+        private final TextView excursionTitleView; // Add this line
 
         public ReportViewHolder(View itemView) {
             super(itemView);
@@ -60,6 +84,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
             hotelView = itemView.findViewById(R.id.hotel);
             startDateView = itemView.findViewById(R.id.startDate);
             endDateView = itemView.findViewById(R.id.endDate);
+            excursionView = itemView.findViewById(R.id.excursionList);
+            excursionTitleView = itemView.findViewById(R.id.excursionTitle); // Bind the title TextView
         }
     }
 }

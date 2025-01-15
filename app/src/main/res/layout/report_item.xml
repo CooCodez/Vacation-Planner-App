@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -24,8 +23,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:gravity="center"/>
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/hotel"
@@ -36,8 +34,7 @@
             app:layout_constraintTop_toBottomOf="@id/vacationName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="5dp"
-            android:gravity="center"/>
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/startDate"
@@ -48,8 +45,7 @@
             app:layout_constraintTop_toBottomOf="@id/hotel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="5dp"
-            android:gravity="center"/>
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/endDate"
@@ -60,8 +56,20 @@
             app:layout_constraintTop_toBottomOf="@id/startDate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="5dp"
-            android:gravity="center"/>
+            android:layout_marginTop="5dp"/>
+
+        <!-- Add a TextView for the "Excursions" label -->
+        <TextView
+            android:id="@+id/excursionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Excursions"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/endDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/excursionList"
@@ -69,11 +77,11 @@
             android:layout_height="wrap_content"
             android:text="Excursions"
             android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@id/endDate"
+            app:layout_constraintTop_toBottomOf="@id/excursionTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:gravity="center"/>
+            android:layout_marginTop="10dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
