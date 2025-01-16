@@ -13,8 +13,10 @@ import com.example.d308vacationplanner.R;
 import com.example.d308vacationplanner.entities.Excursion;
 import com.example.d308vacationplanner.entities.Vacation;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
 
@@ -39,10 +41,17 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
         if (mVacations != null) {
             Vacation current = mVacations.get(position);
+
             holder.vacationNameView.setText(current.getVacationName());
             holder.hotelView.setText(current.getHotel());
-            holder.startDateView.setText(current.getStartDate().toString());
-            holder.endDateView.setText(current.getEndDate().toString());
+
+            // Format the start and end dates to a 12-hour format with AM/PM
+            SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy h:mm a", Locale.getDefault()); // Using "h" instead of "hh"
+            String formattedStartDate = sdf.format(current.getStartDate());
+            String formattedEndDate = sdf.format(current.getEndDate());
+
+            holder.startDateView.setText(formattedStartDate);
+            holder.endDateView.setText(formattedEndDate);
 
             // Display the "Excursions" label
             holder.excursionTitleView.setText("Excursions");
@@ -57,6 +66,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
             holder.excursionView.setText(excursions.toString());
         }
     }
+
 
     @Override
     public int getItemCount() {
@@ -76,7 +86,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         private final TextView startDateView;
         private final TextView endDateView;
         private final TextView excursionView;
-        private final TextView excursionTitleView; // Add this line
+        private final TextView excursionTitleView;
 
         public ReportViewHolder(View itemView) {
             super(itemView);
