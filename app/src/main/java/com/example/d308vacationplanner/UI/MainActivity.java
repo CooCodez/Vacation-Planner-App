@@ -12,12 +12,22 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.d308vacationplanner.R;
 import com.example.d308vacationplanner.database.VacationDatabaseBuilder;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Check if the user is logged in, if not, navigate to LoginActivity
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() == null) {
+            // If no user is logged in, navigate to LoginActivity
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            finish();  // Close MainActivity so the user can't go back to it
+            return;
+        }
 
         // Hide the ActionBar if it exists
         if (getSupportActionBar() != null) {
