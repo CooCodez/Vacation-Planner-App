@@ -13,7 +13,17 @@
           <theme>@style/Theme.D308VacationPlanner</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.D308VacationPlanner</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
         <config>
           <theme>@style/Theme.D308VacationPlanner</theme>
         </config>
@@ -69,16 +79,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9ef7e24-8fb6-48b3-bc67-41ca51ffaf0f" name="Changes" comment="Implement a better sample data insertion with excursions to test reports">
+    <list default="true" id="a9ef7e24-8fb6-48b3-bc67-41ca51ffaf0f" name="Changes" comment="Implement Firebase Authentication with email/password login and registration flow.">
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/d308vacationplanner/UI/ReportAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/d308vacationplanner/UI/ReportAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/d308vacationplanner/UI/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/d308vacationplanner/UI/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +99,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/markillion/.android/avd/Pixel_8_Pro_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/markillion/.android/avd/Pixel_9_API_35.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -138,8 +149,8 @@
         <option value="Interface" />
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -223,6 +234,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
     <key name="android.template.1963879305">
@@ -314,22 +326,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730493836979</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Date verification working again">
-      <option name="closed" value="true" />
-      <created>1731970601534</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1731970601534</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Excursion details now showing hotel and not price">
-      <option name="closed" value="true" />
-      <created>1732043530923</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1732043530923</updated>
     </task>
     <task id="LOCAL-00023" summary="Alert set up for vacation list and added alarm set up verifications">
       <option name="closed" value="true" />
@@ -707,7 +703,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736986496847</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Updated the date into a 12-hour time format">
+      <option name="closed" value="true" />
+      <created>1737060631691</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1737060631691</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Implement Firebase Authentication with email/password login and registration flow.">
+      <option name="closed" value="true" />
+      <created>1737064944249</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1737064944249</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -725,8 +737,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/app" />
     </ignored-roots>
-    <MESSAGE value="back button in excursiondetails is working properly" />
-    <MESSAGE value="Implement validation so that a vacation cannot be deleted if excursions are associated with it" />
     <MESSAGE value="improvements to vacationdetails" />
     <MESSAGE value="Main page ui upgraded" />
     <MESSAGE value="vacations ui upgraded" />
@@ -750,6 +760,8 @@
     <MESSAGE value="it's up and running again" />
     <MESSAGE value="Reports are up" />
     <MESSAGE value="Implement a better sample data insertion with excursions to test reports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement a better sample data insertion with excursions to test reports" />
+    <MESSAGE value="Updated the date into a 12-hour time format" />
+    <MESSAGE value="Implement Firebase Authentication with email/password login and registration flow." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Firebase Authentication with email/password login and registration flow." />
   </component>
 </project>

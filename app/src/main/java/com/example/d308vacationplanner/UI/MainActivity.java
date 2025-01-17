@@ -2,6 +2,7 @@ package com.example.d308vacationplanner.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
             // Navigate to ReportActivity when clicked
             Intent intent = new Intent(MainActivity.this, ReportActivity.class);
             startActivity(intent);
+        });
+
+        // Add Sign Out Button functionality
+        Button signOutButton = findViewById(R.id.signOutButton);
+        signOutButton.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();  // Sign out the user
+            startActivity(new Intent(MainActivity.this, LoginActivity.class)); // Redirect to LoginActivity
+            finish();  // Close MainActivity so the user can't go back
         });
     }
 }
