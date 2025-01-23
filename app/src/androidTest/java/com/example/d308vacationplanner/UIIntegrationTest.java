@@ -89,7 +89,6 @@ public class UIIntegrationTest {
 
         // Check if "Hawaii" appears in the RecyclerView
         onView(withText("Hawaii")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()));  // Check if "Hawaii" appears
-
     }
 
     // Custom helper method to simulate date selection in the DatePicker
@@ -115,11 +114,14 @@ public class UIIntegrationTest {
 
     @Test
     public void testDeleteVacation() {
+        // Make sure the vacation is created and exists first
+        // If vacation was not created before, ensure it's created before the delete test
+
         // Click the FloatingActionButton to navigate to the VacationDetails page
         onView(withId(R.id.floatingActionButton)).perform(ViewActions.click());
 
         // Input vacation location (Name) in the input field
-        onView(withId(R.id.titletext)).perform(typeText("Hawaii"));
+        onView(withId(R.id.titletext)).perform(typeText("Paris"));
 
         // Input hotel name in the hotel input field
         onView(withId(R.id.hoteltext)).perform(typeText("Hilton"));
@@ -156,11 +158,11 @@ public class UIIntegrationTest {
         // Verify the new vacation is added to the RecyclerView (ensure the vacation name appears)
         onView(withId(R.id.recyclerview)).perform(RecyclerViewActions.scrollToPosition(0));
 
-        // Check if "Hawaii" appears in the RecyclerView
-        onView(withText("Hawaii")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()));  // Check if "Hawaii" appears
+        // Check if "Hawaii to Paris" appears in the RecyclerView
+        onView(withText("Paris")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()));  // Check if "Hawaii to Paris" appears
 
         // Now click on the saved vacation to open the VacationDetails page
-        onView(withText("Hawaii")).perform(ViewActions.click());
+        onView(withText("Paris")).perform(ViewActions.click());
 
         // Open the options menu (usually by pressing the overflow menu button)
         onView(withContentDescription("More options")).perform(ViewActions.click());
@@ -174,11 +176,8 @@ public class UIIntegrationTest {
         // Verify that the vacation is removed from the RecyclerView
         onView(withId(R.id.recyclerview)).perform(RecyclerViewActions.scrollToPosition(0));
 
-        // Assert that "Hawaii" no longer exists in the RecyclerView
-        onView(withText("Hawaii")).check(ViewAssertions.doesNotExist());  // Assert that "Hawaii" no longer exists
+        // Assert that "Hawaii to Paris" no longer exists in the RecyclerView
+        onView(withText("Paris")).check(ViewAssertions.doesNotExist());  // Assert that "Hawaii to Paris" no longer exists
     }
-
-
-
 
 }
