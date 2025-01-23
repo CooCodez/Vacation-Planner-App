@@ -33,6 +33,9 @@ public class Excursion {
         return excursionName;
     }
 
+    public void setExcursionName(String excursionName) {  // Added setter
+        this.excursionName = excursionName;
+    }
 
     public String getHotel() {
         return hotel;
@@ -53,5 +56,4 @@ public class Excursion {
     public Date getExcursionDate() {
         return excursionDate;
     }
-
 }

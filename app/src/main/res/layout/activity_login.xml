@@ -53,7 +53,6 @@
         app:strokeColor="@android:color/transparent"
         app:strokeWidth="3dp" />
 
-
     <TextView
         android:id="@+id/registerText"
         android:layout_width="wrap_content"

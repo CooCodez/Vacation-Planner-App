@@ -30,21 +30,46 @@ android {
 }
 
 dependencies {
+    // Application dependencies
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+
+    // JUnit for unit testing
     testImplementation(libs.junit)
+
+    // AndroidX Test dependencies for instrumentation tests
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
     // Room components
     implementation(libs.room.runtime)
+    androidTestImplementation(libs.core.testing)
     annotationProcessor(libs.room.compiler)
     androidTestImplementation(libs.room.testing)
+
+    // For LiveData and Unit Testing
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'  // For InstantTaskExecutorRule and LiveData testing
+    testImplementation "androidx.room:room-testing:2.4.3"  // Ensure this matches your Room version
+
+    // Mockito dependencies for Android tests
+    testImplementation 'org.mockito:mockito-core:4.8.0'  // Latest version of mockito-core
+    testImplementation 'org.mockito:mockito-android:4.8.0'  // Latest version for Android
+
+    // Correct Byte Buddy dependency for Mockito
+    testImplementation 'net.bytebuddy:byte-buddy:1.16.1'  // Correct version of byte-buddy
 
     // Firebase dependencies
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth:21.0.1")  // Add Firebase Authentication
+
+    // AndroidX Test for ActivityScenario and UI tests
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'  // Required for ActivityScenario
+    androidTestImplementation 'androidx.test:core:1.4.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'  // For UI testing with Espresso
 }
+
+
