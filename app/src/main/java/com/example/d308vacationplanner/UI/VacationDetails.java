@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -379,20 +380,32 @@ public class VacationDetails extends AppCompatActivity {
 
     private void deleteVacation() {
         if (vacationID != -1) {
-            // Check if there are any excursions associated with the vacation
+            // Flag to prevent the observer from firing again
+            final boolean[] observerRemoved = {false};
+
+            // Observe associated excursions
             excursionViewModel.getAssociatedExcursions(vacationID).observe(this, excursions -> {
-                if (excursions != null && !excursions.isEmpty()) {
-                    // Show a message indicating the vacation cannot be deleted
-                    Toast.makeText(this, "Cannot delete vacation with associated excursions.", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Proceed with deletion if no excursions are found
-                    vacationViewModel.delete(new Vacation(vacationID, name, hotel, startDate, endDate));
-                    Toast.makeText(this, "Vacation deleted successfully.", Toast.LENGTH_SHORT).show();
-                    finish();  // Close the activity after deletion
+                if (!observerRemoved[0]) {
+                    // Log the state of the excursions
+                    Log.d("VacationDetails", "Excursions: " + (excursions != null ? excursions.size() : "none"));
+
+                    if (excursions != null && !excursions.isEmpty()) {
+                        // Show a message indicating the vacation cannot be deleted
+                        Toast.makeText(this, "Cannot delete vacation with associated excursions.", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Proceed with deletion if no excursions are found
+                        vacationViewModel.delete(new Vacation(vacationID, name, hotel, startDate, endDate));
+                        Toast.makeText(this, "Vacation deleted successfully.", Toast.LENGTH_SHORT).show();
+                        finish();  // Close the activity after deletion
+                    }
+
+
+                    observerRemoved[0] = true;
                 }
             });
         }
     }
+
 
     private void scheduleVacationNotifications() {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);

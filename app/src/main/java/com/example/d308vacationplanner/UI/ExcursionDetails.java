@@ -246,9 +246,7 @@ public class ExcursionDetails extends AppCompatActivity {
                 excursionViewModel.delete(excursion);
                 Toast.makeText(this, getString(R.string.excursion_deleted), Toast.LENGTH_SHORT).show();
                 finish();
-            } else {
-                Toast.makeText(this, getString(R.string.excursion_not_found), Toast.LENGTH_SHORT).show();
-            }
+            } 
         });
     }
 
