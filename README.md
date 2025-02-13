@@ -70,5 +70,3 @@ The app is deployed to **Android 8.0 (Oreo)** and higher.
 
 ---
 
-## Repository Link
-[GitLab Repository](https://gitlab.com/wgu-gitlab-environment/student-repos/mloya23/d308-mobile-application-development-android.git)
